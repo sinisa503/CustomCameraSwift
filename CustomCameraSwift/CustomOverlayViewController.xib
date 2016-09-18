@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomOverlayViewController" customModule="CustomCameraSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CustomOverlayView" customModule="CustomCameraSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEf-7m-Amh">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="6xW-ki-Jxa"/>
+                        <constraint firstAttribute="height" constant="50" id="L4Z-M0-XP0"/>
+                    </constraints>
+                    <state key="normal" image="right-arrow"/>
+                    <connections>
+                        <action selector="cancelButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="tHI-vn-xpK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmG-ZB-hA4">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="0V7-gm-L5i"/>
+                        <constraint firstAttribute="height" constant="70" id="WAR-Co-jdM"/>
+                    </constraints>
+                    <state key="normal" image="camera"/>
+                    <connections>
+                        <action selector="shootButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Ocu-1r-eXP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="WmG-ZB-hA4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="U26-oS-gnL"/>
+                <constraint firstItem="CEf-7m-Amh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="ajO-7j-S3I"/>
+                <constraint firstAttribute="trailing" secondItem="CEf-7m-Amh" secondAttribute="trailing" constant="8" id="h56-IK-Ww0"/>
+                <constraint firstAttribute="bottom" secondItem="WmG-ZB-hA4" secondAttribute="bottom" constant="30" id="xTE-Mp-JN5"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera" width="128" height="128"/>
+        <image name="right-arrow" width="11" height="18"/>
+    </resources>
+</document>
